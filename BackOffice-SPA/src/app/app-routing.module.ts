@@ -7,14 +7,17 @@ const routes: Routes = [
     path: '',
     component: FullComponent,
     children: [
-        { path: '', redirectTo: '/', pathMatch: 'full' },
-        { path: '*', loadChildren: './starter/starter.module#StarterModule' },
-        { path: 'component', loadChildren: './component/component.module#ComponentsModule' }
+        { path: '', redirectTo: '/admin', pathMatch: 'full' },
+        { path: 'starter', loadChildren: './starter/starter.module#StarterModule' },
+        { path: 'component', loadChildren: './component/component.module#ComponentsModule' },
+        { path: 'admin', loadChildren: './admin/admin.module#AdminModule' },
+        { path: 'Employee', loadChildren: './admin/employee/employee.module#EmployeeModule' }
+
     ]
-}, 
+},
 {
     path: '**',
-    redirectTo: 'starter' 
+    redirectTo: 'starter'
 }
 ];
 

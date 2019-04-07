@@ -9,7 +9,7 @@ namespace BackOffice.Core.Models
     public class User
     {
         [Key]
-        public int Id { get; set; }
+        public int UserId { get; set; }
 
         public string FirstName { get; set; }
 
@@ -21,8 +21,26 @@ namespace BackOffice.Core.Models
         [Required]
         public string  Password { get; set; }
 
+        public string FatherName { get; set; }
+
+        public string MotherName { get; set; }
+
+        public DateTime DOB { get; set; }
+
+        public DateTime DateOfJoining { get; set; }
+
+        public DateTime DateOfRelieving { get; set; }
+
+        public string AdharNumber { get; set; }
+
+        public string PanNumber { get; set; }
+
+        public bool Active { get; set; }
+
         public int RoleId { get; set; }
 
         public Role Role { get; set; }
+
+        public List<UserProject> UserProjects { get; set; }
     }
 }
